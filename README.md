@@ -13,12 +13,19 @@ Provides resume improvement tips
 Folder Structure:
 
 resume_screening_app/
+
 │── .venv/
+
 │── app.py
+
 │── requirements.txt
+
 │── data/
+
 │   ├── sample_resume.pdf
+
 │── README.md
+
 │── .gitignore
 
 
@@ -27,6 +34,7 @@ Installation & Setup:
 1.Clone the Repository 
 
 git clone https://github.com/DuhithB/AI-powered-resume-screening-and-ranking-system
+
 cd AI-Resume-Ranking-System
 
 2.(Optional) Create a Virtual Environment

@@ -1,69 +1,91 @@
-# AI-powered-Resume-Screening-and-Ranking-System
+AI Resume Screening & Ranking System
 
-### An AI-powered system for automated resume screening and ranking based on job descriptions.
+This project is an AI-powered resume screening and ranking system built using Streamlit, scikit-learn, and PyPDF2. The application allows users to upload multiple resumes in PDF format, compare them to a given job description, and rank them based on cosine similarity using TF-IDF.  
 
-## 📌 Overview
-The **Resume Ranking System** is an AI-driven tool designed to simplify and optimize the hiring process. It allows recruiters to upload resumes, enter a job description, and receive ranked resumes based on their relevance. This system leverages **Natural Language Processing (NLP)** and **Machine Learning (ML)** algorithms to evaluate and compare resumes efficiently.
+Features: 
+Upload multiple PDF resumes  
+Enter a job description to compare resumes  
+ Uses TF-IDF & Cosine Similarity for ranking  
+Displays ranked resumes with match scores & AI suggestions
+Provides resume improvement tips  
 
-## ✨ Features
-- 📂 **Upload multiple resumes** (PDF format, max 200MB per file)
-- 📝 **Input job description** to match candidate profiles
-- 📊 **Resume ranking system** using NLP and ML techniques
-- 🔍 **Match score (%)** to evaluate candidate relevance
-- 💡 **AI suggestions** for resume improvement
-- 🎨 **Dark theme UI** with a sleek, interactive design
-- ☁ **Deployed using Streamlit**
+Folder Structure:
+resume_screening_app/
+│── .venv/
+│── app.py
+│── requirements.txt
+│── data/
+│   ├── sample_resume.pdf
+│── README.md
+│── .gitignore
 
-## 🛠️ Tech Stack
-- **Frontend & UI:** Streamlit
-- **Backend:** Python, Flask
-- **NLP Processing:** spaCy, NLTK, TF-IDF
-- **Machine Learning:** Scikit-learn, KNN, Cosine Similarity
-- **Data Handling:** Pandas, NumPy
-- **Deployment:** Streamlit Cloud / Local Hosting
 
-## 📷 Screenshots
-### Upload Resumes & Enter Job Description
-![Upload Resume](./screenshots/upload.png)
-![Upload Resume](./screenshots/resumeupload.png)
+Installation & Setup:
+1.Clone the Repository 
 
-### Resume Ranking Results
-![Resume Ranking](./screenshots/screening.png)
+git clone https://github.com/YOUR-GITHUB-USERNAME/AI-Resume-Ranking-System.git
+cd AI-Resume-Ranking-System
 
-## 🏗️ Installation & Setup
-### Clone the Repository
-```bash
-git clone https://github.com/rutikakengal/AI-Resume-Screening-And-System-Ranking.git
-cd AI-Resume-Screening-And-System-Ranking
-```
+2.(Optional) Create a Virtual Environment
+python -m venv .venv
 
-### Install Dependencies
-```bash
+Activate the virtual environment:
+- Windows:
+  .venv\Scripts\activate
+ 
+- Mac/Linux: 
+  source .venv/bin/activate
+
+3.Install Dependencies
 pip install -r requirements.txt
-```
 
-### Run the Application
-```bash
+4. Run the Application
 streamlit run app.py
-```
 
-## 🎯 How It Works
-1. **Upload resumes** (PDF format)
-2. **Enter job description** in the input box
-3. Click **Submit** to process and rank resumes
-4. **View ranked resumes** with match scores & AI suggestions
 
-## 📌 Future Enhancements
-- ✅ Support for DOCX and other file formats
-- ✅ Advanced AI-based skill extraction
-- ✅ Cloud-based deployment
+The app will open in your default web browser at `localhost:8501`  
 
-## 💡 Contributing
-Contributions are welcome! Feel free to fork this repo and submit a pull request.
+How It Works:
+Upload PDF resumes using the file uploader.  
+Enter a job description in the provided text area.  
+The system extracts text from resumes using PyPDF2.  
+Converts job descriptions & resumes into TF-IDF vectors.  
+Computes cosine similarity between resumes & job description.  
+Ranks resumes based on match score & provides AI-powered tips.  
 
-## 🔗 Connect With Me
-- **GitHub:** [rutikakengal](https://github.com/rutikakengal)
-- **LinkedIn:** [rutikakengal](www.linkedin.com/in/rutika-kengal-b3b0a22b7)
 
----
-🚀 **Transform your hiring process with AI-powered resume ranking!**
+Deployment:
+Deploy on Streamlit Cloud (Free)
+Push your project to GitHub.  
+Go to Streamlit Cloud and log in.  
+Click New App, select your GitHub repository.  
+Set the file path to app.py.  
+Click Deploy  
+
+Requirements:
+streamlit
+PyPDF2
+pandas
+scikit-learn
+numpy
+
+Install all dependencies using:  
+pip install -r requirements.txt
+
+
+Who Can Use This?
+
+- HR & Recruiters
+- Hiring Managers  
+- Job Portals
+- AI Enthusiasts & Students.  
+
+Future Enhancements:
+AI-Based Scoring– Use ML/Deep Learning for more accurate ranking.  
+Advanced NLP – Integrate BERT/GPT for deeper text analysis.  
+Multi-Format Support – Add support for DOCX, TXT & OCR.  
+Skill Matching – Extract skills & experience automatically.  
+API Integration – Connect with job portals & HR systems.  
+
+Conclusion
+This AI-powered Resume Screening & Ranking System simplifies the resume screening process by automating ranking using TF-IDF & Cosine Similarity. With PDF text extraction, real-time ranking, and easy deployment, this project provides an efficient, scalable, and user-friendly solution for recruiters, hiring managers, and job portals
